@@ -1,0 +1,2 @@
+export type UserPayload={nome:string;email:string;password:string;administrador:'true'|'false'};
+export const buildUser=(overrides:Partial<UserPayload>={}):UserPayload=>({nome:'QA GenAI',email:`qa.${Date.now()}.${Math.random().toString(36).slice(2)}@example.com`,password:'Teste@123',administrador:'false',...overrides});

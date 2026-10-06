@@ -1,0 +1,2 @@
+export type ProductPayload={nome:string;preco:number;descricao:string;quantidade:number};
+export const buildProduct=(overrides:Partial<ProductPayload>={}):ProductPayload=>({nome:`Produto QA ${Date.now()} ${Math.random().toString(36).slice(2)}`,preco:100,descricao:'Produto criado por teste automatizado',quantidade:10,...overrides});
